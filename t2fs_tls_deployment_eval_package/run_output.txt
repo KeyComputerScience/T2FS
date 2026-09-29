@@ -1,0 +1,100 @@
+{
+  "protocol_results": [
+    {
+      "profile": "T2FS-MLWE-512-IoT",
+      "trials": 500,
+      "client_extension_bytes": 713,
+      "server_extension_bytes": 727,
+      "total_extension_bytes": 1440,
+      "hint_bytes": 32,
+      "fo_tag_bytes": 16,
+      "one_try_bits": 72.267761,
+      "two_try_bits": 144.535521,
+      "normal_accept": 500,
+      "fault_reject": 500,
+      "fo_fault_reject": 500,
+      "replay_reject": 500,
+      "state_for_16_epochs_bytes": 98,
+      "baseline_16_secrets_bytes": 512,
+      "state_reduction_percent": 80.86,
+      "key_update_bytes": 8,
+      "net_bytes_saved": 1432
+    },
+    {
+      "profile": "T2FS-MLWE-768-IoT",
+      "trials": 500,
+      "client_extension_bytes": 1033,
+      "server_extension_bytes": 1047,
+      "total_extension_bytes": 2080,
+      "hint_bytes": 32,
+      "fo_tag_bytes": 16,
+      "one_try_bits": 72.267761,
+      "two_try_bits": 144.535521,
+      "normal_accept": 500,
+      "fault_reject": 500,
+      "fo_fault_reject": 500,
+      "replay_reject": 500,
+      "state_for_16_epochs_bytes": 98,
+      "baseline_16_secrets_bytes": 512,
+      "state_reduction_percent": 80.86,
+      "key_update_bytes": 8,
+      "net_bytes_saved": 2072
+    }
+  ],
+  "resource_rows": [],
+  "handshake_summary": [],
+  "energy_summary": [],
+  "network_summary": [],
+  "attack_summary": [
+    {
+      "protocol": "T2FS-TLS",
+      "attack": "replay",
+      "trials": 500,
+      "rejected": 500,
+      "accepted": 0,
+      "abort_stage": "transcript_replay_cache",
+      "source": "generated_protocol_check"
+    },
+    {
+      "protocol": "T2FS-TLS",
+      "attack": "tamper",
+      "trials": 500,
+      "rejected": 500,
+      "accepted": 0,
+      "abort_stage": "fo_tag",
+      "source": "generated_protocol_check"
+    },
+    {
+      "protocol": "T2FS-TLS",
+      "attack": "wrong_hint",
+      "trials": 500,
+      "rejected": 500,
+      "accepted": 0,
+      "abort_stage": "fo_tag",
+      "source": "generated_protocol_check"
+    },
+    {
+      "protocol": "T2FS-TLS",
+      "attack": "wrong_fo_tag",
+      "trials": 500,
+      "rejected": 500,
+      "accepted": 0,
+      "abort_stage": "fo_tag",
+      "source": "generated_protocol_check"
+    },
+    {
+      "protocol": "T2FS-TLS",
+      "attack": "finished_mismatch",
+      "trials": 500,
+      "rejected": 500,
+      "accepted": 0,
+      "abort_stage": "finished",
+      "source": "generated_protocol_check"
+    }
+  ],
+  "notes": [
+    "Generated protocol results are deterministic.",
+    "Hardware measurements are populated only from CSV logs.",
+    "No board-level latency, energy, Flash, SRAM, or stack values are fabricated."
+  ]
+}

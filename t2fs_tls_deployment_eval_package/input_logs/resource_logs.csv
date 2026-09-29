@@ -1,0 +1,4 @@
+device,stack,protocol,flash_bytes,static_sram_bytes,peak_stack_bytes,heap_mode,heap_peak_bytes
+ESP32,mbedTLS,T2FS-TLS,,,,,
+nRF52840,Contiki-NG,T2FS-TLS,,,,none,
+STM32,WolfSSL,T2FS-TLS,,,,,
