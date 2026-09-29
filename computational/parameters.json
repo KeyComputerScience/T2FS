@@ -1,0 +1,21 @@
+{
+  "profiles": {
+    "512-IoT": {
+      "n": 256,
+      "k": 2,
+      "q": 3329,
+      "eta_s": 3,
+      "eta_e": 2,
+      "tag_bits": 128
+    },
+    "768-IoT": {
+      "n": 256,
+      "k": 3,
+      "q": 3329,
+      "eta_s": 2,
+      "eta_e": 2,
+      "tag_bits": 128
+    }
+  },
+  "note": "Parameters transcribed from the current T2FS-TLS manuscript. Reconcile computed numerical bounds with manuscript claims before publication."
+}
