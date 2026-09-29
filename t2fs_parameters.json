@@ -1,0 +1,38 @@
+{
+  "artifact": "T2FS-TLS",
+  "profiles": {
+    "512-IoT": {
+      "name": "T2FS-MLWE-512-IoT",
+      "n": 256,
+      "k": 2,
+      "q": 3329,
+      "eta_s": 3,
+      "eta_e": 2,
+      "tag_bits": 128,
+      "finished_bits": 128
+    },
+    "768-IoT": {
+      "name": "T2FS-MLWE-768-IoT",
+      "n": 256,
+      "k": 3,
+      "q": 3329,
+      "eta_s": 2,
+      "eta_e": 2,
+      "tag_bits": 128,
+      "finished_bits": 128
+    }
+  },
+  "default_query_counts": {
+    "q_tag": 1,
+    "q_finished": 1
+  },
+  "formulas": {
+    "variance_bound": "sigma_Delta^2 <= k*n*eta_s*eta_e/2 + eta_e/2",
+    "coefficient_failure": "2*exp(-(q/8)^2/(2*sigma_Delta^2))",
+    "single_reconciliation_failure": "n * coefficient_failure",
+    "retry_failure": "(single_reconciliation_failure)^2",
+    "tag_guessing": "q_tag * 2^(-tag_bits)",
+    "finished_guessing": "q_finished * 2^(-finished_bits)"
+  },
+  "note": "Reconcile computed numerical bounds with the manuscript claims before publication; do not hard-code target security exponents."
+}
